@@ -37,7 +37,8 @@
             <p>touched: {{passwordFormulario.touched}}</p>
             <p>pristine: {{passwordFormulario.pristine}}</p>
             <p>dirty: {{passwordFormulario.dirty}}</p>
-            <p>untouched: {{passwordFormulario.untouched}}</p>
+            <p>untouched: {{passwordFormulario.untouched}}
+            <pre>{{passwordFormulario.errors}}</pre>
           </ion-label>
         </ion-item>
 
@@ -46,6 +47,7 @@
           <ion-input type="password"
                      required
                      minlength="3"
+                     maxlength="5"
                      [(ngModel)]="password"
                      name="password"
                      #passwordFormulario="ngModel"></ion-input>
